@@ -1,20 +1,16 @@
 import { Camper, CamperForm, Engine, Transmission } from "./camper";
 
 export interface CampersResponse {
-  items: Camper[];
-
-  total: number;
-
   page: number;
-
   perPage: number;
-
+  total: number;
   totalPages: number;
+
+  campers: Camper[];
 }
 
 export interface CampersFilters {
   page?: number;
-
   perPage?: number;
 
   location?: string;

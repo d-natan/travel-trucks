@@ -32,16 +32,21 @@ export async function getCamperReviews(camperId: string): Promise<Review[]> {
 
 export interface BookingRequest {
   name: string;
-
   email: string;
-
-  bookingDate: string;
-
-  comment: string;
 }
 
-export async function createBooking(camperId: string, body: BookingRequest) {
-  const { data } = await api.post(`/campers/${camperId}/bookings`, body);
+export interface BookingResponse {
+  message: string;
+}
+
+export async function createBookingRequest(
+  camperId: string,
+  body: BookingRequest,
+): Promise<BookingResponse> {
+  const { data } = await api.post(
+    `/campers/${camperId}/booking-requests`,
+    body,
+  );
 
   return data;
 }

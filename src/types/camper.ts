@@ -38,6 +38,8 @@ export interface Camper {
 
   amenities: string[];
 
+  coverImage: string;
+
   gallery: GalleryImage[];
 
   totalReviews: number;
