@@ -1,32 +1,35 @@
 import type { Metadata } from "next";
+
 import { Inter } from "next/font/google";
 
 import "./globals.css";
 
-import QueryProvider from "../providers/QueryProvider";
+import Header from "@/components/layout/Header";
+import { QueryProvider } from "@/providers";
 
 const inter = Inter({
   subsets: ["latin"],
-  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "TravelTrucks",
-    template: "%s | TravelTrucks",
-  },
-  description: "Find and rent the perfect camper for your next adventure.",
+  title: "TravelTrucks",
+
+  description: "Camper rental service",
 };
 
-type RootLayoutProps = Readonly<{
+export default function RootLayout({
+  children,
+}: Readonly<{
   children: React.ReactNode;
-}>;
-
-export default function RootLayout({ children }: RootLayoutProps) {
+}>) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <QueryProvider>{children}</QueryProvider>
+        <QueryProvider>
+          <Header />
+
+          <main>{children}</main>
+        </QueryProvider>
       </body>
     </html>
   );
