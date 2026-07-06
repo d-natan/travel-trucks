@@ -1,0 +1,16 @@
+.wrapper {
+  margin-bottom: 40px;
+}
+
+.title {
+  margin-bottom: 24px;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 112px);
+  gap: 12px;
+}

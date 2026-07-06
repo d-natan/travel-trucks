@@ -2,15 +2,14 @@
 
 import { useQuery } from "@tanstack/react-query";
 
-import { getCamperById } from "@/services/api";
-import { queryKeys } from "@/constants/queryKeys";
+import { getCamperById } from "@/services";
 
 export function useCamper(camperId: string) {
   return useQuery({
-    queryKey: queryKeys.camper(camperId),
+    queryKey: ["camper", camperId],
 
     queryFn: () => getCamperById(camperId),
 
-    enabled: !!camperId,
+    enabled: Boolean(camperId),
   });
 }

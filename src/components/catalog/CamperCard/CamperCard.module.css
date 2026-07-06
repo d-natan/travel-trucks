@@ -1,0 +1,78 @@
+.card {
+  display: flex;
+  gap: 24px;
+
+  padding: 24px;
+
+  border: 1px solid #dadde1;
+  border-radius: 20px;
+
+  background-color: #ffffff;
+}
+
+.imageWrapper {
+  position: relative;
+
+  width: 292px;
+  min-width: 292px;
+  height: 320px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 8px;
+}
+
+.title {
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 24px;
+}
+
+.description {
+  margin-bottom: 24px;
+
+  color: #6c717b;
+
+  line-height: 1.5;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.link {
+  margin-top: auto;
+
+  width: fit-content;
+
+  text-decoration: none;
+}

@@ -1,0 +1,9 @@
+.filters {
+  width: 360px;
+  flex-shrink: 0;
+}
+
+.button {
+  width: 166px;
+  margin-top: 8px;
+}

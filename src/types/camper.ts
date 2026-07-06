@@ -8,20 +8,28 @@ export type Transmission = "automatic" | "manual";
 
 export type Engine = "diesel" | "petrol" | "hybrid" | "electric";
 
-export interface GalleryImage {
-  id: string;
-  camperId: string;
-  thumb: string;
-  original: string;
-  order: number;
-}
+export type Amenity =
+  | "ac"
+  | "bathroom"
+  | "kitchen"
+  | "tv"
+  | "radio"
+  | "refrigerator"
+  | "microwave"
+  | "gas"
+  | "water";
 
-export interface Camper {
+export interface CamperListItem {
   id: string;
+
   name: string;
+
   price: number;
+
   rating: number;
+
   location: string;
+
   description: string;
 
   form: CamperForm;
@@ -34,29 +42,63 @@ export interface Camper {
   consumption: string;
 
   transmission: Transmission;
+
   engine: Engine;
 
-  amenities: string[];
+  amenities: Amenity[];
 
   coverImage: string;
-
-  gallery: GalleryImage[];
 
   totalReviews: number;
 
   createdAt: string;
+
   updatedAt: string;
 }
 
-export interface Review {
+export interface CamperImage {
   id: string;
   camperId: string;
 
-  reviewer_name: string;
+  thumb: string;
+  original: string;
 
-  reviewer_rating: number;
+  order: number;
+}
 
-  comment: string;
+export interface CamperDetails {
+  id: string;
+
+  name: string;
+
+  price: number;
+
+  rating: number;
+
+  totalReviews: number;
+
+  location: string;
+
+  description: string;
+
+  form: CamperForm;
+
+  length: string;
+  width: string;
+  height: string;
+
+  tank: string;
+  consumption: string;
+
+  transmission: Transmission;
+
+  engine: Engine;
+
+  amenities: Amenity[];
+
+  gallery: CamperImage[];
 
   createdAt: string;
+
+  updatedAt: string;
 }

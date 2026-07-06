@@ -1,3 +1,3 @@
-export function formatPrice(price: number): string {
-  return `€${price.toLocaleString("en-US")}`;
+export function formatPrice(price: number) {
+  return `€${price.toFixed(2)}`;
 }

@@ -2,31 +2,29 @@
 
 import { useInfiniteQuery } from "@tanstack/react-query";
 
-import { getCampers } from "@/services/api";
-import { queryKeys } from "@/constants/queryKeys";
-import { CampersFilters } from "@/types/api";
+import { getCampers } from "@/services";
+import { CAMPERS_PER_PAGE } from "@/constants";
+import type { CamperFilters } from "@/types";
 
-const PER_PAGE = 4;
-
-export function useCampers(filters: Omit<CampersFilters, "page" | "perPage">) {
+export function useCampers(filters: CamperFilters) {
   return useInfiniteQuery({
-    queryKey: [...queryKeys.campers, filters],
+    queryKey: ["campers", filters],
+
+    queryFn: ({ pageParam = 1 }) =>
+      getCampers({
+        page: pageParam,
+        perPage: CAMPERS_PER_PAGE,
+        ...filters,
+      }),
 
     initialPageParam: 1,
 
-    queryFn: ({ pageParam }) =>
-      getCampers({
-        ...filters,
-        page: pageParam,
-        perPage: PER_PAGE,
-      }),
-
     getNextPageParam: (lastPage) => {
-      if (lastPage.page < lastPage.totalPages) {
-        return lastPage.page + 1;
+      if (lastPage.page >= lastPage.totalPages) {
+        return undefined;
       }
 
-      return undefined;
+      return lastPage.page + 1;
     },
   });
 }

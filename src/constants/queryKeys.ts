@@ -1,7 +1,9 @@
-export const queryKeys = {
+export const QUERY_KEYS = {
   campers: ["campers"] as const,
 
-  camper: (id: string) => ["camper", id] as const,
+  camper: ["camper"] as const,
 
-  reviews: (id: string) => ["reviews", id] as const,
+  reviews: ["reviews"] as const,
+
+  filters: ["filters"] as const,
 };
