@@ -15,6 +15,10 @@ const links = [
     href: "/catalog",
     label: "Catalog",
   },
+  {
+    href: "/favorites",
+    label: "Favorites",
+  },
 ];
 
 export default function Navigation() {

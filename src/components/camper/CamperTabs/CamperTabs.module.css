@@ -1,0 +1,63 @@
+.tabs {
+  display: flex;
+
+  gap: 40px;
+
+  border-bottom: 1px solid #dadde1;
+
+  margin-bottom: 44px;
+}
+
+.tab {
+  position: relative;
+
+  padding-bottom: 24px;
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  color: #101828;
+}
+
+.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: -1px;
+
+  height: 5px;
+
+  background: #e44848;
+
+  border-radius: 4px;
+}
+
+.content {
+  display: grid;
+
+  grid-template-columns: 1fr 640px;
+
+  gap: 40px;
+
+  align-items: start;
+}
+
+.left {
+  min-width: 0;
+}
+
+.right {
+  position: sticky;
+
+  top: 32px;
+}

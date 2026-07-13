@@ -1,0 +1,31 @@
+.textarea {
+  width: 100%;
+  min-height: 120px;
+
+  padding: 18px;
+
+  resize: vertical;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #f7f7f7;
+
+  font-size: 16px;
+
+  outline: none;
+}
+
+.textarea:focus {
+  outline: 1px solid #e44848;
+}
+
+.error {
+  color: #d92d20;
+
+  font-size: 14px;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}

@@ -1,0 +1,30 @@
+.container {
+  min-height: calc(100vh - 72px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
+  text-align: center;
+}
+
+.code {
+  font-size: 80px;
+  font-weight: 700;
+
+  color: #e44848;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.text {
+  font-size: 18px;
+
+  color: #6c717b;
+}

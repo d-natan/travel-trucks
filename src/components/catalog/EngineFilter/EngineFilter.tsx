@@ -8,12 +8,7 @@ import FilterCard from "../FilterCard";
 
 import styles from "./EngineFilter.module.css";
 
-import type { Engine } from "@/types";
-
-interface Props {
-  value: Engine | "";
-  onChange: (value: Engine | "") => void;
-}
+type Engine = "" | "diesel" | "petrol" | "hybrid" | "electric";
 
 interface Props {
   value: Engine;

@@ -1,0 +1,43 @@
+.wrapper {
+  background: #f7f7f7;
+
+  border-radius: 24px;
+
+  padding: 44px 52px;
+}
+
+.amenities {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+.badge {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  border-radius: 100px;
+
+  background: white;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  color: #101828;
+}
+
+.icon {
+  display: flex;
+
+  align-items: center;
+
+  font-size: 18px;
+}

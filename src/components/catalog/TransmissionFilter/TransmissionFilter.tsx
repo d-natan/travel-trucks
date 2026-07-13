@@ -6,12 +6,7 @@ import FilterCard from "../FilterCard";
 
 import styles from "./TransmissionFilter.module.css";
 
-import type { Transmission } from "@/types";
-
-interface Props {
-  value: Transmission | "";
-  onChange: (value: Transmission | "") => void;
-}
+type Transmission = "" | "automatic" | "manual";
 
 interface Props {
   value: Transmission;

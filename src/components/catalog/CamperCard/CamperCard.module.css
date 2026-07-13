@@ -34,10 +34,8 @@
 
 .header {
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
-
-  margin-bottom: 8px;
+  align-items: flex-start;
 }
 
 .title {
@@ -75,4 +73,10 @@
   width: fit-content;
 
   text-decoration: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }

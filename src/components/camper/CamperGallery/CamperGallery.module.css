@@ -1,0 +1,31 @@
+.gallery {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 24px;
+
+  margin-bottom: 28px;
+}
+
+.imageWrapper {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 292 / 312;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+}
+
+.image {
+  object-fit: cover;
+
+  transition: transform 250ms ease;
+}
+
+.image:hover {
+  transform: scale(1.04);
+}
